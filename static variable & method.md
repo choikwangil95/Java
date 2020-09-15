@@ -1,5 +1,8 @@
 ## Static
 static은 보통 변수나 메소드 앞에 static 키워드를 붙여서 사용하게 된다.
+### Reference
+[1](https://wikidocs.net/228)
+[2](https://velog.io/@lshjh4848/static%EB%B3%80%EC%88%98%EC%99%80-static-%EB%A9%94%EC%84%9C%EB%93%9C-final-xpk2l8e7g0)
 
 ### 1 Static 변수
 웹 사이트 방문시마다 조회수를 증가시키는 Counter 프로그램이 다음과 같이 있다고 가정 해 보자
