@@ -4,11 +4,11 @@
 [1](https://doublesprogramming.tistory.com/73)
 
 ### 변수 초기화 방법에는 3가지 방법이 있다
-- 명시적 초기화
-- 생성자
-- 초기화 블럭 (클래스 초기화 / 인스턴스 초기화)
+- 명시적 초기화 (Explicit initialization)
+- 생성자 (Constructor)
+- 초기화 블럭 (클래스 초기화 / 인스턴스 초기화) (Initializaiton block)
 
-### 1 명시적 초기화
+### 1 명시적 초기화 (Explicit initialization)
 변수 선언과 함깨 동시에 초기화 하는 것을 명시적 초기화라고 함
 ```java
 class Car {
@@ -17,7 +17,7 @@ Enging engine = new Engine();   // 참조형 변수 초기화
 }
 ```
 
-### 2 초기화 블럭
+### 2 초기화 블럭 (Initializaiton block)
 인스턴스 변수의 초기화는 주로 생성자를 사용한다
 #### 인스턴스 초기화 블럭은 모든 생성자에게 공통으로 수행되어야 하는 코드임
 ```java
