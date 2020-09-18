@@ -1,6 +1,7 @@
 ## 클래스 변수 초기화
 초기화 되지 않은 변수는 null pointer exception error를 발생시키기 때문에 초기화가 필요함 
 #### ref
+[1](https://doublesprogramming.tistory.com/73)
 
 ### 변수 초기화 방법에는 3가지 방법이 있다
 - 명시적 초기화
