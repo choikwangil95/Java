@@ -1,1 +1,168 @@
+## Clean code
+내맘대로 짠 코드를 앞으로 clean하게 develop 해보자
+```java
+// get_fibonacci.java
 
+package fibonacci;
+
+public class get_fibonacci {
+	public static int fibonacci(int n) {
+		if (n == 0 || n == 1) { 
+			return n; 
+		}else { 
+			return fibonacci(n-1) + fibonacci(n-2); 
+		}
+	};
+	
+	public static int[] array(int a, int b) {	// static method 선언 -> 객체 생성 없이 사용 가능
+		int[] array = new int[b-a+1];
+		for(int t=0; t<array.length; t++) {
+			array[t] = get_fibonacci.fibonacci(a);
+			a++;
+		}
+		return array;
+	}
+}
+```
+
+```java
+// fibonacci.java
+
+package fibonacci;
+import java.util.*;
+
+public class fibonacci {
+	public static void main (String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.print("순열의 최소 및 최대 범위의 정수 값  차례대로 입력(ex 1 100): ");
+		int start = in.nextInt();
+		int end = in.nextInt();
+		int[] array = get_fibonacci.array(start, end);
+		int[] sum_array = new int[5];
+		int result_1 = get_result(start, end);
+		sum_array[0] = result_1;
+		int i=1;
+		
+		while(i<sum_array.length) {
+			System.out.printf("%n 범위 내에 조건을 만족하는 수들의 총합과 평균값%n");
+			System.out.printf("1: 짝수 %n");
+			System.out.printf("2: 홀수 %n");
+			System.out.printf("3: 약수 %n");
+			System.out.printf("4: 배수 %n");
+			System.out.printf("원하는 조건을 입력: ");
+			
+			int condition_number = in.nextInt();
+			int result_2;
+			
+			if (condition_number == 1 || condition_number == 2) {
+				result_2 = condition_1(condition_number, array);
+				sum_array[i] = result_2;
+				i++;
+				continue;
+				
+			} else {
+				System.out.printf("원하는 숫자를 입력: ");
+				int number = in.nextInt();
+				result_2 = condition_2(condition_number, number, array);
+				sum_array[i] = result_2;
+				i++;
+				continue;
+			}
+		}
+		
+		int max = sum_array[0];
+		
+		for(int l=0;l<sum_array.length-1; l++) {
+			if (sum_array[l+1] > max) {
+				max = sum_array[l+1];
+			}
+		}
+
+		System.out.printf("%nmost number is = %d", max);
+		
+		return;
+	}
+	
+	public static int get_sum(int[] a) {
+		int sum = 0;
+		
+		for(int element : a) {
+			sum += element;
+		}
+		
+		return sum;
+	}
+	
+	public static int get_result(int a, int b) {
+		int[] array = get_fibonacci.array(a, b);
+		int sum = get_sum(array);
+		double avg = sum/array.length;
+		System.out.printf("총합: %d, 평균: %.2f %n", sum, avg);
+		
+		return sum;
+	}
+	
+	public static int condition_1(int a, int[] b) {
+		int sum=0;
+		int i=0;
+		
+		switch(a) {
+			case 1: 
+				for(int element : b) {
+					if (element%2 == 0) {
+						i++;
+						sum += element;
+					}
+				}
+				double even_avg = sum/i;
+				System.out.printf("짝수의합: %d, 평균: %.2f %n", sum, even_avg);
+				
+				return sum;
+				
+			case 2:
+				for(int element : b) {
+					if (element%2 != 0) {
+						i++;
+						sum += element;
+					}
+				}
+				double odd_avg = sum/i;
+				System.out.printf("홀수의합: %d, 평균: %.2f %n", sum, odd_avg);
+				return sum;
+		}
+		return sum;
+	}
+	
+	public static int condition_2(int a, int b, int[] c) {
+		int sum=0;
+		int i=0;
+		
+		switch(a) {
+			case 3: 
+				for(int element : c) {
+					if (b%element == 0) {
+						i++;
+						sum += element;
+					}
+				};
+				double divisor_avg = sum/i;
+				System.out.printf("약수들의합: %d, 평균: %.2f %n", sum, divisor_avg);
+				return sum;
+				
+			case 4:
+				for(int element : c) {
+					if (element%b == 0) {
+						i++;
+						sum += element;
+					}
+				};
+				
+				double multiple_avg = sum/i;
+				System.out.printf("배수들의합: %d, 평균: %.2f %n", sum, multiple_avg);
+				return sum;
+		}
+		return sum;
+	}
+}
+
+```
