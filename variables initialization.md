@@ -36,7 +36,7 @@ class InitBlock {
 ```
 예시
 ```java
-// 인스턴스 초기화 블럭을 통해 중복 제거
+// 인스턴스 초기화 블럭을 통해 중복 제거 -> 모든 생성자에게 적용됨
 {
   count++;
   serialNo = count;
