@@ -3,10 +3,11 @@
 #### ref
 [1](https://doublesprogramming.tistory.com/73)
 
-### 변수 초기화 방법에는 3가지 방법이 있다
+#### 변수 초기화 방법에는 3가지 방법이 있다
 - 명시적 초기화 (Explicit initialization)
 - 생성자 (Constructor)
 - 초기화 블럭 (클래스 초기화 / 인스턴스 초기화) (Initializaiton block)
+<br/>
 
 ### 1 명시적 초기화 (Explicit initialization)
 변수 선언과 함깨 동시에 초기화 하는 것을 명시적 초기화라고 함
