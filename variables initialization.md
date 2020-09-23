@@ -57,3 +57,27 @@ Car(String color, String gearType) {
 초기화 순서는 class 초기화 -> 인스턴스 블럭 -> 생성자 순으로 초기화가 진행됨 <br/>
 class 초기화는 메모리에 로딩될 때 한번만 초기화 됨 <br/>
 인스턴스 블럭, 생성자는 인스턴스가 생성될 때 마다 초기화 <br/>
+
+### 생성자 Method Overideing
+
+객체 생성 시 인자값에 들어오는 변수에 따라 초기화되는 값이 다르다
+
+```java
+
+public class Account {
+
+  private final String name;
+  
+  public Account(String name, double balance) {
+  
+    this.name = ~~;
+  
+  }
+
+  public Account(String name) {
+  
+    this.name = ~~;
+  
+  }
+}
+```
