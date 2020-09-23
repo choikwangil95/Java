@@ -6,8 +6,8 @@
 
 public class ArrayStack {
 	private int stack_top;	// 객체들이 다른 값을 가져야 하니, static ㄴㄴ
-	private int[] stack;	// data encapsulation을 위한 private modify
-	private int size;
+	private int[] stack;	// data encapsulation을 위한 private modify 
+	private int size;	// get, set으로 해당 변수에 접근해야함
 	
 	public ArrayStack(int size) {	// 생성자로 변수 초기화
 		stack_top = -1;
