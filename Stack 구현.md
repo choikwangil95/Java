@@ -5,9 +5,9 @@
 // ArrayStack 클래스
 
 public class ArrayStack {
-	int stack_top;	// 객체들이 다른 값을 가져야 하니, static ㄴㄴ
-	int[] stack;
-	int size;
+	private int stack_top;	// 객체들이 다른 값을 가져야 하니, static ㄴㄴ
+	private int[] stack;	// data encapsulation을 위한 private modify
+	private int size;
 	
 	public ArrayStack(int size) {	// 생성자로 변수 초기화
 		stack_top = -1;
