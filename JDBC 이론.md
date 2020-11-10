@@ -28,12 +28,12 @@ JAVA에서 DB 프로그래밍을 하기 위해 사용되는 API
   ResultSet resultSet=null;	// 결과 담을 resultSet 선언
 
   try {
-	        connection = DriverManager.getConnection(url,user,password);
-	        System.out.println("Connected PostgreSQL database");
-	        System.out.println("");
-	    }catch (SQLException sqlEX) {
-	        System.out.println(sqlEX);
-	    }
+    connection = DriverManager.getConnection(url,user,password);
+    System.out.println("Connected PostgreSQL database");
+    System.out.println("");
+  }catch (SQLException sqlEX) {
+    System.out.println(sqlEX);
+}
 ```
 
 ### 2 Statement를 이용한 쿼리 실행
