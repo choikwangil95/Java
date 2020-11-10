@@ -1,6 +1,9 @@
 ## JDBC with PostgreSQL
 eclipse IDE에서 JAVA를 사용해 PostgreSQL DB date 값을 CRUD
 
+![image](https://user-images.githubusercontent.com/48672212/98659420-6eb75d80-2387-11eb-8b6e-cca88db4d353.png)
+
+
 ### 1 Data
 ```java
   // law data
