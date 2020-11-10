@@ -10,8 +10,6 @@ JAVA에서 DB 프로그래밍을 하기 위해 사용되는 API
 
 ![image](https://user-images.githubusercontent.com/48672212/98656114-a45a4780-2383-11eb-8928-e3b1b1371155.png)
 
-<br/>
-
 ### JDBC 사용
 - 1 JDBC 드라이버 load 
 - 2 DB 연결
